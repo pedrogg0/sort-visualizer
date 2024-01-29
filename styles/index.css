@@ -1,0 +1,27 @@
+.title{
+    text-align: center;
+    border: 3px solid black;
+}
+#visualizer{
+    display: flex;
+    position: relative;
+    margin: auto;
+    border: 3px solid black;
+    width: 50%;
+    height: 400px;
+}
+.randomizer{
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    width: 10%;
+    display: block;
+}
+
+.element{
+    align-self: flex-end;
+    border: 1px solid black;
+    height: 100px;
+    flex-grow: 1;
+}
