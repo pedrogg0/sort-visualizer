@@ -148,6 +148,5 @@ algorithmList.forEach(element => {
 
 var elementsList = [];
 insertElements(20, elementsList);
-console.log(elementsList);
 
 
