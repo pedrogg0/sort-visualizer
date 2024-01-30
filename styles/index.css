@@ -10,13 +10,27 @@
     width: 50%;
     height: 400px;
 }
-.randomizer{
+#btn-section{
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 10%;
+}
+#randomizer{
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid black;
-    width: 10%;
-    display: block;
+      
+}
+
+#play-btn{
+    margin-top: 1rem;
+    margin-left: 10%;
+    border: 3px solid black;
+    
+    
 }
 
 .element{

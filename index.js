@@ -47,7 +47,7 @@ async function selectionSort(elementsList) {
         elementsList[minIndex] = aux;  
 
         showElements(elementsList);
-        
+
         //Swap Animation
         elementsList[minIndex].newDiv.style.backgroundColor = "red";
         await sleep(100);
@@ -60,8 +60,18 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function play(){
+    selectionSort(elementsList);
+}
+
+function randomize(){
+    elementsList = [];
+    showElements(elementsList)
+    insertElements(20, elementsList);
+}
+
 var elementsList = [];
 insertElements(20, elementsList);
-selectionSort(elementsList);
 console.log(elementsList);
+
 
