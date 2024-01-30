@@ -58,25 +58,27 @@ async function selectionSort(elementsList) {
 
 async function bubbleSort(elementsList){
     for (var i = 0; i < elementsList.length; i++) {
- 
         // Last i elements are already in place  
         for (var j = 0; j < (elementsList.length - i - 1); j++) {
- 
             // Checking if the item at present iteration 
             // is greater than the next iteration
-            if (elementsList[j] > elementsList[j + 1]) {
-                
+            if (elementsList[j].height > elementsList[j + 1].height) {           
                 // If the condition is true
                 // then swap them
                 var temp = elementsList[j]
                 elementsList[j] = elementsList[j + 1]
                 elementsList[j + 1] = temp
+                showElements(elementsList);
+
+                //Swap Animation
+                elementsList[j].newDiv.style.backgroundColor = "green";
+                elementsList[j+1].newDiv.style.backgroundColor = "red";
+                await sleep(100);
+                elementsList[j+1].newDiv.style.backgroundColor = "white";
+                elementsList[j].newDiv.style.backgroundColor = "white";
             }
         }
     }
- 
-    // Print the sorted elementsListay
-    console.log(elementsList);
 }
 
 
