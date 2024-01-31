@@ -36,7 +36,7 @@ async function selectionSort(elementsList) {
         //Swap Animation
         elementsList[minIndex].newDiv.style.backgroundColor = "red";
         await sleep(100);
-        elementsList[minIndex].newDiv.style.backgroundColor = "white";
+        elementsList[minIndex].newDiv.style.backgroundColor = "#146C94";
 
         for (let j = i + 1; j < elementsList.length; j++) {
             if (elementsList[j].height < elementsList[minIndex].height) {
@@ -52,7 +52,7 @@ async function selectionSort(elementsList) {
         //Swap Animation
         elementsList[minIndex].newDiv.style.backgroundColor = "red";
         await sleep(100);
-        elementsList[minIndex].newDiv.style.backgroundColor = "white";
+        elementsList[minIndex].newDiv.style.backgroundColor = "#146C94";
     }
     return elementsList;
 }
@@ -75,8 +75,8 @@ async function bubbleSort(elementsList){
                 elementsList[j].newDiv.style.backgroundColor = "green";
                 elementsList[j+1].newDiv.style.backgroundColor = "red";
                 await sleep(50);
-                elementsList[j+1].newDiv.style.backgroundColor = "white";
-                elementsList[j].newDiv.style.backgroundColor = "white";
+                elementsList[j+1].newDiv.style.backgroundColor = "#146C94";
+                elementsList[j].newDiv.style.backgroundColor = "#146C94";
             }
         }
     }
