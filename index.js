@@ -3,6 +3,7 @@ class Element {
         const newDiv = document.createElement('div');
         newDiv.setAttribute("class", "element");
         newDiv.style.height = height + "px";
+        newDiv.style.backgroundColor = "#146C94";
         this.height = height;
         this.newDiv = newDiv;
     }
@@ -73,7 +74,7 @@ async function bubbleSort(elementsList){
                 //Swap Animation
                 elementsList[j].newDiv.style.backgroundColor = "green";
                 elementsList[j+1].newDiv.style.backgroundColor = "red";
-                await sleep(100);
+                await sleep(50);
                 elementsList[j+1].newDiv.style.backgroundColor = "white";
                 elementsList[j].newDiv.style.backgroundColor = "white";
             }

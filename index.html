@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting Algorithm Visualizer</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h1 class="title">Sorting Algorithm Visualizer</h1>
     </header>
-    <div class="current-algorithm">
-        <p id="current-algorithm">current Algorithm</p>
-        <div class="dropdown">
-            <button onclick="changeAlgorithm()" class="dropbtn">Change</button>
-            <div id="dropdown" class="dropdown-content">
-            </div>
-          </div>
+    <div class="main-content">
+        <div class="current-algorithm-section">
+            <p id="current-algorithm">current Algorithm</p>
+            <div class="dropdown">
+                <button onclick="changeAlgorithm()" class="dropbtn">Change</button>
+                <div id="dropdown" class="dropdown-content">
+                </div>
+              </div>
+        </div>
+        <div id="visualizer"></div>
     </div>
-    <div id="visualizer"></div>
     <div id="btn-section">
-        <btn onclick="randomize()" id="randomizer">Randomize</btn>
-        <btn onclick="play()" id="play-btn">Play</btn>
+        <btn onclick="randomize()" id="randomizer"></btn>
+        <btn onclick="play()" id="play-btn"></btn>
     </div>
     <script src="index.js"></script>
 </body>
