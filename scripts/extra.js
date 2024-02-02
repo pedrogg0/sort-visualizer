@@ -22,10 +22,3 @@ function insertElements(numElements, elementsList) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-//Clean and fill the list with random value elements
-function randomize(){
-    elementsList = [];
-    showElements(elementsList)
-    insertElements(20, elementsList);
-}
