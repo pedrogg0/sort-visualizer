@@ -8,7 +8,7 @@ class Element {
         this.newDiv = newDiv;
     }
 }
-//TODO: Merge with randomize
+
 function insertElements(numElements, elementsList) {
     var visualizer = document.getElementById("visualizer");
     for(var i = 0; i < numElements; i++) {

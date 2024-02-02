@@ -1,3 +1,5 @@
+var algorithmList = ["Selection Sort", "Bubble sort", "Insertion sort", "Quick sort"] //All available algorithms 
+
 async function selectionSort(elementsList) {
     
     for (let i = 0; i < elementsList.length - 1; i++) { // Recorre lista de elementos

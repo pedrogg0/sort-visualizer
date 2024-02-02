@@ -56,9 +56,8 @@ window.onclick = function (event) {
     }
 }
 
-var algorithmList = ["Selection Sort", "Bubble sort", "Insertion sort", "Quick sort"] //All available algorithms 
-changeCurrentAlgorithm(algorithmList[0]); //Start displaying the first algorithm of the list
 
+changeCurrentAlgorithm(algorithmList[0]); //Start displaying the first algorithm of the list
 dropdown = document.getElementById("dropdown");
 
 //Fill dropdown with every algorithm available
