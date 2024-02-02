@@ -82,10 +82,10 @@ header {
 #randomizer {
     margin-top: 1rem;
     margin-left: 40%;
-    height: 55px;
-    width: 55px;
+    height: 70px;
+    width: 70px;
     margin-right: auto;
-    background: url("../assets/shuffle-button.png"); 
+    background: url("../assets/shuffleEmpty.png"); 
     background-repeat: no-repeat;    
     background-position: center center;
     background-size: cover;
@@ -97,7 +97,7 @@ header {
     margin-right: 40%;
     height: 70px;
     width: 70px;
-    background: url("../assets/play-button.png"); 
+    background: url("../assets/playEmpty.png"); 
     background-repeat: no-repeat;    
     background-position: center center;
     background-size: cover;
