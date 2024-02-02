@@ -13,6 +13,8 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
+    color: white;
+    display: inline-flex;
 }
 
 
@@ -23,6 +25,19 @@ header {
 
 }
 
+#github-img{
+    height: 50px;
+    margin-top: 15px;
+    
+}
+
+#github{
+    position: right;
+    text-align: right;
+    width: 50%;
+    margin-right: 2%;
+}
+
 .main-content {
     margin-top: 100px;
     display: flex;
@@ -30,8 +45,8 @@ header {
 
 .title {
     text-align: left;
-    color: white;
     margin-left: 2%;
+    width: 50%;
 }
 
 #current-algorithm {
