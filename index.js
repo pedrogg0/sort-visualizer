@@ -82,19 +82,93 @@ async function bubbleSort(elementsList){
     }
 }
 
+async function insertionSort(elementsList){
+    let i, key, j;
+    for (i = 1; i < elementsList.length; i++){
+        key = elementsList[i];
+        j = i - 1;
+        key.newDiv.style.backgroundColor = "red";
+        while (j >= 0 && elementsList[j].height > key.height){
+
+            showElements(elementsList);
+            await sleep(50);
+            elementsList[j + 1] = elementsList[j];
+            j = j - 1;
+            elementsList[j + 1] = key;
+            showElements(elementsList);
+            await sleep(50);
+        }
+        key = key.newDiv.style.backgroundColor = "#146C94";
+    }
+}
+
+async function swap(elementsList, leftIndex, rightIndex){
+    var temp = elementsList[leftIndex];
+    elementsList[leftIndex].newDiv.style.backgroundColor = "red";
+    elementsList[rightIndex].newDiv.style.backgroundColor = "orange";
+    showElements(elementsList);
+    await sleep(200);
+    elementsList[leftIndex] = elementsList[rightIndex];
+    elementsList[rightIndex] = temp;
+    showElements(elementsList);
+    await sleep(200);
+    elementsList[leftIndex].newDiv.style.backgroundColor = "#146C94";
+    elementsList[rightIndex].newDiv.style.backgroundColor = "#146C94";
+}
+
+async function partition(elementsList, left, right) {
+    var pivot   = elementsList[Math.floor((right + left) / 2)], //middle element
+    i       = left, //left pointer
+    j       = right; //right pointer
+    pivot.newDiv.style.backgroundColor = "blue";
+    while (i <= j) {
+        while (elementsList[i].height < pivot.height) {
+            i++;
+        }
+        while (elementsList[j].height > pivot.height) {
+            j--;
+        }
+        if (i <= j) {
+            await swap(elementsList, i, j); //swap two elements
+            i++;
+            j--;
+        }
+    }
+    return i;
+}
+
+async function quickSort(elementsList, left, right) {
+    var index;
+    if (elementsList.length > 1) {
+        index = await partition(elementsList, left, right); //index returned from partition
+        if (left < index - 1) { //more elements on the left side of the pivot
+            await quickSort(elementsList, left, index - 1);
+        }
+        if (index < right) { //more elements on the right side of the pivot
+            await quickSort(elementsList, index, right);
+        }
+    }
+    return elementsList;
+}
+
+
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 //Play the currently selected algorithm
-function play(){
+async function play(){
     const currentAlgorithm = document.getElementById("current-algorithm").innerHTML;
     switch (currentAlgorithm) {
         case "Selection Sort":
-            selectionSort(elementsList);
+            await selectionSort(elementsList);
             break;
         case "Bubble sort":
-            bubbleSort(elementsList);
+            await bubbleSort(elementsList);
+        case "Insertion sort":
+            await insertionSort(elementsList);
+        case "Quick sort":
+            await quickSort(elementsList, 0, elementsList.length - 1);
         default:
             break;
     }
@@ -133,7 +207,7 @@ window.onclick = function (event) {
     }
 }
 
-var algorithmList = ["Selection Sort", "Bubble sort"] //All available algorithms 
+var algorithmList = ["Selection Sort", "Bubble sort", "Insertion sort", "Quick sort"] //All available algorithms 
 changeCurrentAlgorithm(algorithmList[0]); //Start displaying the first algorithm of the list
 
 dropdown = document.getElementById("dropdown");
