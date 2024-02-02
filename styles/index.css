@@ -85,11 +85,18 @@ header {
     height: 70px;
     width: 70px;
     margin-right: auto;
-    background: url("../assets/shuffleEmpty.png"); 
     background-repeat: no-repeat;    
     background-position: center center;
     background-size: cover;
 
+}
+
+.randomizer-empty{
+    background: url("../assets/shuffleEmpty.png"); 
+}
+
+.randomizer-filled{
+    background: url("../assets/shuffle-button.png"); 
 }
 
 #play-btn {
@@ -97,29 +104,37 @@ header {
     margin-right: 40%;
     height: 70px;
     width: 70px;
-    background: url("../assets/playEmpty.png"); 
     background-repeat: no-repeat;    
     background-position: center center;
     background-size: cover;
 
 }
 
+.play-btn-empty{
+    background: url("../assets/playEmpty.png"); 
+}
+
+.play-btn-filled{
+    background: url("../assets/playFilled.png"); 
+
+}
+
 #randomizer:hover {
     -webkit-filter: brightness(70%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }
 
 #play-btn:hover {
     -webkit-filter: brightness(70%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }
 
 .element {

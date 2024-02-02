@@ -10,17 +10,22 @@ function showElements(elementsList){
 }
 
 //Clean and fill the list with random value elements
-function randomize(){
+async function randomize(){
     if(!running){
+        document.getElementById("randomizer").classList.add("randomizer-filled");
         elementsList = [];
         showElements(elementsList)
         insertElements(20, elementsList);
+        await sleep(80);
+        document.getElementById("randomizer").classList.remove("randomizer-filled");
+
     }
 }
 
 //Play the currently selected algorithm
 async function play(){
     if(!running){
+        document.getElementById("play-btn").classList.add("play-btn-filled");
         running = true;
         const currentAlgorithm = document.getElementById("current-algorithm").innerHTML;
         switch (currentAlgorithm) {
@@ -40,6 +45,7 @@ async function play(){
                 break;
         }
         running = false;
+        document.getElementById("play-btn").classList.remove("play-btn-filled");
     }
 }
 
