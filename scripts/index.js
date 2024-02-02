@@ -9,31 +9,46 @@ function showElements(elementsList){
     });
 }
 
+//Clean and fill the list with random value elements
+function randomize(){
+    if(!running){
+        elementsList = [];
+        showElements(elementsList)
+        insertElements(20, elementsList);
+    }
+}
+
 //Play the currently selected algorithm
 async function play(){
-    const currentAlgorithm = document.getElementById("current-algorithm").innerHTML;
-    switch (currentAlgorithm) {
-        case "Selection Sort":
-            await selectionSort(elementsList);
-            break;
-        case "Bubble sort":
-            await bubbleSort(elementsList);
-            break;
-        case "Insertion sort":
-            await insertionSort(elementsList);
-            break;
-        case "Quick sort":
-            await quickSort(elementsList, 0, elementsList.length - 1);
-            break;
-        default:
-            break;
+    if(!running){
+        running = true;
+        const currentAlgorithm = document.getElementById("current-algorithm").innerHTML;
+        switch (currentAlgorithm) {
+            case "Selection Sort":
+                await selectionSort(elementsList);
+                break;
+            case "Bubble sort":
+                await bubbleSort(elementsList);
+                break;
+            case "Insertion sort":
+                await insertionSort(elementsList);
+                break;
+            case "Quick sort":
+                await quickSort(elementsList, 0, elementsList.length - 1);
+                break;
+            default:
+                break;
+        }
+        running = false;
     }
 }
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function changeAlgorithm() {
-    document.getElementById("dropdown").classList.toggle("show");
+    if(!running){
+        document.getElementById("dropdown").classList.toggle("show");
+    }
 }
 
 //Function to change the name of the current algorithm
@@ -68,7 +83,7 @@ algorithmList.forEach(element => {
     dropdown.appendChild(newBtn);
 });
 
-
+var running = false;
 var elementsList = [];
 insertElements(20, elementsList);
 
