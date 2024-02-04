@@ -21,20 +21,32 @@
                 </a>
             </div>
     </header>
-    <div class="main-content">
-        <div class="current-algorithm-section">
-            <p id="current-algorithm">Current Algorithm</p>
-            <div class="dropdown">
-                <button onclick="changeAlgorithm()" class="dropbtn">Change</button>
-                <div id="dropdown" class="dropdown-content">
-                </div>
-              </div>
+    <div class="section">
+        <div class="main-content">
+            <div class="current-algorithm-section">
+                <p id="current-algorithm">Current Algorithm</p>
+                <div class="dropdown">
+                    <button onclick="changeAlgorithm()" class="dropbtn">Change</button>
+                    <div id="dropdown" class="dropdown-content">
+                    </div>
+                  </div>
+            </div>
+            <div id="visualizer"></div>
         </div>
-        <div id="visualizer"></div>
+        <div id="btn-section">
+            <btn onclick="randomize()" id="randomizer" class="randomizer-empty"></btn>
+            <btn onclick="play()" id="play-btn" class="play-btn-empty"></btn>
+        </div>
     </div>
-    <div id="btn-section">
-        <btn onclick="randomize()" id="randomizer" class="randomizer-empty"></btn>
-        <btn onclick="play()" id="play-btn" class="play-btn-empty"></btn>
+    <div class="navigation-widget">
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="section">
+        <div id="explanation-content">
+            <h2>extra</h2>
+            <p>sajkghdfkgjhfdgkjdfkjgsdfhgkfjdghdfkjghfjkghfsdjkghfdkjghfdgkhfkjghfskjghfdkgjhdfkjghfdkgjhfdjkghfdjghdsfkjhgssdjkghsjkfdhgdjghsk</p>
+        </div>
     </div>
     <script src="scripts/extra.js"></script>
     <script src="scripts/algorithms.js"></script>
