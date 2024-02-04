@@ -44,10 +44,23 @@ header {
     margin-right: 2%;
 }
 
+#algorithm-name{
+    font-size: 35px;
+}
+
 #explanation-content{
+    width: 40%;
+}
+
+#implementation{
+    margin-left: 10%;
+}
+
+#explanation-section{
     padding-top: 10%;
     margin-left: 5%;
     color: white;
+    display: flex;
 }
 
 .main-content {

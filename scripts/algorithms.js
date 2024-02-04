@@ -28,6 +28,10 @@ async function selectionSort(elementsList) {
     return elementsList;
 }
 
+var selectionSortBestCase = "O(n²)"
+var selectionSortWorstCase = "O(n²)"
+var selectionSortDescription = "selection sort is a method for sorting data such as numbers into an ordered list. It is not an efficient method of sorting data compared to more advanced algorithms such as quicksort and heapsort When given a list of unsorted data, the algorithm will divide the list into two parts: one part that has all the sorted data and another part that has all the remaining unsorted data. When the algorithm first starts, there is no data in the first part as no data has been sorted yet and all the unsorted data is in the second part. The algorithm then starts to find the smallest item in the unsorted data and swap it with the left-most element of the list. The part with the sorted data is then the left-most element and the part with the unsorted data is the remaining unsorted elements. The algorithm repeats itself, by finding the smallest element within the list of unsorted data and swapping it with the left-most element, eventually getting a sorted data."
+
 async function bubbleSort(elementsList){
     for (var i = 0; i < elementsList.length; i++) {
         // Last i elements are already in place  
