@@ -9,14 +9,36 @@ class Element {
     }
 }
 
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex > 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+
 function insertElements(numElements, elementsList) {
     var visualizer = document.getElementById("visualizer");
+    let unitValue = 300/numElements;
+    let currentValue = unitValue;
     for(var i = 0; i < numElements; i++) {
-        var value = Math.floor(Math.random() * 300) + 1;
-        const element = new Element(value);
+        const element = new Element(currentValue);
         elementsList.push(element);
+        currentValue += unitValue;
         visualizer.appendChild(element.newDiv);
     }
+    shuffle(elementsList);
+    showElements(elementsList);
 }
 
 function sleep(ms) {
