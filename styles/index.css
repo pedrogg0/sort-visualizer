@@ -1,3 +1,7 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
 body {
     background-color: #AFD3E2;
     font-family: 'Roboto', sans-serif;
@@ -15,6 +19,8 @@ header {
     margin: 0;
     color: white;
     display: inline-flex;
+    height: 80px;
+
 }
 
 
@@ -38,8 +44,14 @@ header {
     margin-right: 2%;
 }
 
+#explanation-content{
+    padding-top: 10%;
+    margin-left: 5%;
+    color: white;
+}
+
 .main-content {
-    margin-top: 100px;
+    padding-top: 10%;
     display: flex;
 }
 
@@ -155,6 +167,33 @@ header {
     font-family: 'Roboto', sans-serif;
     border: none;
     cursor: pointer;
+}
+
+.navigation-widget {
+    position: fixed;
+    margin-top: auto;
+    margin-left: 90%;
+    top: 50%; 
+    left: 50px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 50%;
+    display:  block;
+    transition: transform 0.1s ease;
+}
+
+.section{
+    height: 100vh;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 /* Dropdown button on hover & focus */
