@@ -6,7 +6,7 @@ async function selectionSort(elementsList) {
         let minIndex = i;
         //Swap Animation
         elementsList[minIndex].newDiv.style.backgroundColor = "red";
-        await sleep(100);
+        await sleep(50);
         elementsList[minIndex].newDiv.style.backgroundColor = "#146C94";
 
         for (let j = i + 1; j < elementsList.length; j++) {
@@ -22,7 +22,7 @@ async function selectionSort(elementsList) {
 
         //Swap Animation
         elementsList[minIndex].newDiv.style.backgroundColor = "red";
-        await sleep(100);
+        await sleep(50);
         elementsList[minIndex].newDiv.style.backgroundColor = "#146C94";
     }
     return elementsList;
@@ -60,7 +60,7 @@ async function bubbleSort(elementsList){
                 //Swap Animation
                 elementsList[j].newDiv.style.backgroundColor = "green";
                 elementsList[j+1].newDiv.style.backgroundColor = "red";
-                await sleep(50);
+                await sleep(15);
                 elementsList[j+1].newDiv.style.backgroundColor = "#146C94";
                 elementsList[j].newDiv.style.backgroundColor = "#146C94";
             }
@@ -88,12 +88,12 @@ async function insertionSort(elementsList){
         while (j >= 0 && elementsList[j].height > key.height){
 
             showElements(elementsList);
-            await sleep(50);
+            await sleep(20);
             elementsList[j + 1] = elementsList[j];
             j = j - 1;
             elementsList[j + 1] = key;
             showElements(elementsList);
-            await sleep(50);
+            await sleep(20);
         }
         key = key.newDiv.style.backgroundColor = "#146C94";
     }
@@ -117,11 +117,11 @@ async function swap(elementsList, leftIndex, rightIndex){
     elementsList[leftIndex].newDiv.style.backgroundColor = "red";
     elementsList[rightIndex].newDiv.style.backgroundColor = "orange";
     showElements(elementsList);
-    await sleep(200);
+    await sleep(50);
     elementsList[leftIndex] = elementsList[rightIndex];
     elementsList[rightIndex] = temp;
     showElements(elementsList);
-    await sleep(200);
+    await sleep(50);
     elementsList[leftIndex].newDiv.style.backgroundColor = "#146C94";
     elementsList[rightIndex].newDiv.style.backgroundColor = "#146C94";
 }

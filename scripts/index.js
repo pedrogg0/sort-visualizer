@@ -15,7 +15,7 @@ async function randomize(){
         document.getElementById("randomizer").classList.add("randomizer-filled");
         elementsList = [];
         showElements(elementsList)
-        insertElements(20, elementsList);
+        insertElements(40, elementsList);
         await sleep(80);
         document.getElementById("randomizer").classList.remove("randomizer-filled");
 
@@ -147,6 +147,6 @@ algorithmList.forEach(element => {
 
 var running = false;
 var elementsList = [];
-insertElements(20, elementsList);
+insertElements(40, elementsList);
 
 
