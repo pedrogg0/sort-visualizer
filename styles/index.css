@@ -50,10 +50,22 @@ header {
 
 #explanation-content{
     width: 40%;
+    font-size: 20px;
+    margin-left: 5%;
+    color: #146C94;
 }
 
 #implementation{
     margin-left: 10%;
+    font-size: 20px;
+    
+}
+
+#implementation-code{
+    padding: 15px;
+    border-style: solid solid;
+    border-color: #146C94;
+    height: fit-content;
 }
 
 #explanation-section{
