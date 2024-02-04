@@ -49,6 +49,15 @@ async function play(){
     }
 }
 
+function fillExplanationContent(algorithm, bestCase, worstCase, description, code){
+    document.getElementById("algorithm-name").innerHTML = algorithm;
+    document.getElementById("best-case").innerHTML = "Best case: " + bestCase;
+    document.getElementById("worst-case").innerHTML = "Worst case: " + worstCase;
+    document.getElementById("description").innerHTML = description;
+    document.getElementById("implementation-code").innerHTML = code;
+
+}
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function changeAlgorithm() {
@@ -60,6 +69,22 @@ function changeAlgorithm() {
 //Function to change the name of the current algorithm
 function changeCurrentAlgorithm(currentAlgorithm){
     document.getElementById("current-algorithm").innerHTML = currentAlgorithm;
+    switch (currentAlgorithm) {
+        case "Selection Sort":
+            fillExplanationContent(currentAlgorithm, selectionSortBestCase, selectionSortWorstCase, selectionSortDescription, selectionSortCode);
+            break;
+        case "Bubble sort":
+            fillExplanationContent(currentAlgorithm, bubbleSortBestCase, bubbleSortWorstCase, bubbleSortDescription, bubbleSortCode);
+            break;
+        case "Insertion sort":
+            fillExplanationContent(currentAlgorithm, insertionSortBestCase, insertionSortWorstCase, insertionSortDescription, insertionSortCode);
+            break;
+        case "Quick sort":
+            fillExplanationContent(currentAlgorithm, quickSortBestCase, quickSortWorstCase, quickSortDescription, quickSortCode);
+            break;
+        default:
+            break;
+    }
     
 }
 
