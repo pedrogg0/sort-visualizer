@@ -6,6 +6,7 @@ body {
     background-color: #AFD3E2;
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    overflow: auto;
 }
 
 header {
@@ -20,6 +21,7 @@ header {
     color: white;
     display: inline-flex;
     height: 80px;
+    z-index: 1;
 
 }
 
@@ -90,7 +92,7 @@ header {
     text-align: center;
     margin-top: auto;
     margin-bottom: 0;
-    font-size: 35px;
+    font-size: 2.2vw;
     color: white;
 
 }
@@ -118,10 +120,10 @@ header {
 
 #randomizer {
     margin-top: 1rem;
-    margin-left: 40%;
+    margin-left: auto;
+    margin-right: 5%;
     height: 70px;
     width: 70px;
-    margin-right: auto;
     background-repeat: no-repeat;    
     background-position: center center;
     background-size: cover;
@@ -138,7 +140,8 @@ header {
 
 #play-btn {
     margin-top: 1rem;
-    margin-right: 40%;
+    margin-right: auto;
+    margin-left: 5%;
     height: 70px;
     width: 70px;
     background-repeat: no-repeat;    
@@ -188,7 +191,7 @@ header {
     background-color: #146C94;
     color: white;
     padding: 3px 7px;
-    font-size: 16px;
+    font-size: 1vw;
     font-family: 'Roboto', sans-serif;
     border: none;
     cursor: pointer;
@@ -255,4 +258,127 @@ header {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display: block;
+}
+
+#implementation h3{
+    font-size: 35px;
+}
+
+@media screen and (max-width: 900px) {
+    #btn-section{
+        margin-top: 1%;
+        scale: 70%;
+    }
+
+    header{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title{
+        vertical-align: middle;
+        margin-left: 4%;
+        font-size: 20px;
+        height: auto;
+    }
+
+    #github{
+        text-align: right;
+    }
+
+    #github-img{
+        margin-left: 15%;
+    }
+
+    #github h1{
+        display: none;
+    }
+
+
+    #visualizer{
+        scale: 90%;
+    }
+
+    #randomizer{
+        margin-left: 35%;
+    }
+
+    .navigation-widget {
+        position: fixed;
+        margin-top: auto;
+        margin-left: 80%;
+        top: 50%; 
+        left: 50px; 
+        display: flex;
+        flex-direction: column; 
+    }
+
+    #explanation-content{
+        width: 40%;
+        font-size: 10px;
+        margin-left: 1%;
+        color: #146C94;
+    }
+
+    #explanation-content h2{
+        font-size: 20px;
+    }
+    
+    #implementation{
+        margin-left: 10%;
+        font-size: 10px;
+        
+    }
+
+    #implementation h3{
+        font-size: 20px;
+    }
+    
+    #implementation-code{
+        padding: 10px;
+        border-style: solid solid;
+        border-color: #146C94;
+        height: fit-content;
+        font-size: 10px;
+    }
+
+    #explanation-section{
+        padding-top: 20%;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .main-content{
+        margin-top: 10%;
+        margin-left: 1%;
+    }
+
+    #current-algorithm{
+        font-size: 4.5vw;
+    }
+    .dropbtn{
+        font-size: 2vw;    
+    }
+    .current-algorithm-section{
+        width: 30%;
+        
+    }
+    #randomizer{
+        margin-left: 35%;
+    }
+    #explanation-section{
+        padding-top: 70%;
+    }
+    #implementation-code{
+        padding: 5px;
+    }
+
+
+
 }
