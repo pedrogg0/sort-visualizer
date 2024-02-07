@@ -1,4 +1,4 @@
-var algorithmList = ["Insertion sort", "Selection Sort", "Bubble sort", "Quick sort"] //All available algorithms 
+var algorithmList = ["Bubble sort", "Selection Sort", "Insertion sort", "Quick sort"] //All available algorithms 
 
 async function selectionSort(elementsList) {
     
